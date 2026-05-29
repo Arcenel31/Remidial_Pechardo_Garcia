@@ -33,20 +33,23 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
+                                    @foreach ($employees as $item)
+
                                     <tbody  >
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td> 
-                                                <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
-                                                <a href="#" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
+                                            <td>{{ $item->id }}</td>
+                                            <td>{{ $item->first_name }}</td>
+                                            <td>{{ $item->last_name }}</td>
+                                            <td>{{ $item->middle_name }}</td>
+                                            <td>{{ $item->address }}</td>
+                                            <td>{{ $item->date_of_birth }}</td>
+                                            <td>
+                                                <a href="{{ route('employees.edit', $item->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
+                                                <a href="{{ route('employees.destroy', $item->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>
