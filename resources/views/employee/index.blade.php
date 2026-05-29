@@ -35,12 +35,12 @@
                                     </thead>
                                     <tbody  >
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{ $employee->id }}</td>
+                                            <td>{{ $employee->first_name }}</td>
+                                            <td>{{ $employee->last_name }}</td>
+                                            <td>{{ $employee->middle_name }}</td>
+                                            <td>{{ $employee->address }}</td>
+                                            <td>{{ $employee->date_of_birth }}</td>
                                             <td> 
                                                 <a href="#" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
                                                 <a href="#" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
